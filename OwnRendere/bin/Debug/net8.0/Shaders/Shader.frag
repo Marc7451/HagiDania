@@ -1,9 +1,13 @@
 #version 330 core
+out vec4 outputColor; // Output color of the fragment
 
-out vec4 FragColor;
-in vec3 v2fColor;
+in vec2 texCoord; // Input from vertex shader
+
+uniform sampler2D texture0;
+uniform sampler2D texture1;
 
 void main()
 {
-	FragColor = vec4(v2fColor, 1);
+    // Mix two textures with a 60% blend from texture1
+    outputColor = mix(texture(texture0, texCoord), texture(texture1, texCoord), 0.6);
 }

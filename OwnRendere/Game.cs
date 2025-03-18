@@ -11,24 +11,30 @@ namespace OwnRendere
         private Color4 backgroundColor = new Color4(0.2f, 0.1f, 0.1f, 1.0f);
         private bool isFullscreen = false;
 
-        // Change color
-        float greenValue = 1;
-        bool increaseGreen = false;
-
-        // Change position
+        // Position og hastighed
         Vector2 position = new Vector2(0, 0);
         float speed = .01f;
 
         private int vertexArrayObject;
         private int vertexBufferObject;
+        private int elementBufferObject;
         private Shader shader;
+        private Texture texture0;
+        private Texture texture1;
 
-        private readonly float[] verticesTriangleWithCol =
+        float[] vertices =
         {
-            // positions         // colors
-             0.5f, -0.5f, 0.0f,  1.0f, 0.0f, 0.0f, // bottom right
-            -0.5f, -0.5f, 0.0f,  0.0f, 1.0f, 0.0f, // bottom left
-             0.0f,  0.5f, 0.0f,  0.0f, 0.0f, 1.0f  // top center
+            // Position        // Texture coords
+             0.5f,  0.5f, 0.0f,  1.0f, 1.0f, // Top Right
+             0.5f, -0.5f, 0.0f,  1.0f, 0.0f, // Bottom Right
+            -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, // Bottom Left
+            -0.5f,  0.5f, 0.0f,  0.0f, 1.0f  // Top Left
+        };
+
+        uint[] indices =
+        {
+            0, 1, 3, // Første trekant
+            1, 2, 3  // Anden trekant
         };
 
         public Game(GameWindowSettings gameWindowSettings, NativeWindowSettings nativeWindowSettings) : base(gameWindowSettings, nativeWindowSettings)
@@ -37,45 +43,52 @@ namespace OwnRendere
             Size = new Vector2i(800, 800);
         }
 
-
         protected override void OnLoad()
         {
             base.OnLoad();
 
-            // Send data til OpenGL
+            // Indlæs tekstur
+            texture0 = new Texture("Textures/wall.jpg");
+            texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+
+            // Opret VBO (Vertex Buffer Object)
             vertexBufferObject = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ArrayBuffer, vertexBufferObject);
-            GL.BufferData(BufferTarget.ArrayBuffer, verticesTriangleWithCol.Length * sizeof(float), verticesTriangleWithCol, BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
 
+            // Opret VAO (Vertex Array Object)
             vertexArrayObject = GL.GenVertexArray();
             GL.BindVertexArray(vertexArrayObject);
 
-            // Position attribute (3 floats per vertex)
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), 0);
+            // Opret EBO (Element Buffer Object) for at bruge `indices`
+            elementBufferObject = GL.GenBuffer();
+            GL.BindBuffer(BufferTarget.ElementArrayBuffer, elementBufferObject);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
+
+            // Position (layout = 0)
+            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 0);
             GL.EnableVertexAttribArray(0);
 
-            // Color attribute (3 floats per vertex)
-            GL.VertexAttribPointer(1, 3, VertexAttribPointerType.Float, false, 6 * sizeof(float), 3 * sizeof(float));
+            // Texture koordinater (layout = 1)
+            GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), 3 * sizeof(float));
             GL.EnableVertexAttribArray(1);
 
+            // Indlæs shaders
             shader = new Shader("Shaders/shader.vert", "Shaders/shader.frag");
+            shader.Use();
+            shader.SetInt("texture0", 0);
+            shader.SetInt("texture1", 1);
         }
 
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             base.OnRenderFrame(args);
-
             GL.Clear(ClearBufferMask.ColorBufferBit);
-            shader.Use();
-
-            // Send uniform color til shader
-            int vertexColorLocation = GL.GetUniformLocation(shader.Handle, "aColor");
-            GL.Uniform4(vertexColorLocation, 0.0f, greenValue, 0.0f, 1.0f);
-
             GL.BindVertexArray(vertexArrayObject);
-            GL.DrawArrays(PrimitiveType.Triangles, 0, verticesTriangleWithCol.Length / 6);
-
-            GL.ClearColor(backgroundColor);
+            texture0.Use(TextureUnit.Texture0);
+            texture1.Use(TextureUnit.Texture1);
+            shader.Use();
+            GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
             SwapBuffers();
         }
 
@@ -90,33 +103,9 @@ namespace OwnRendere
                 Close();
             }
 
-            if (input.IsKeyDown(Keys.W))
-            {
-                if (backgroundColor.R < 1)
-                    backgroundColor.R += .01f;
-            }
-
             if (input.IsKeyDown(Keys.F))
             {
                 ToggleFullscreen();
-            }
-
-            if (input.IsKeyDown(Keys.E))
-            {
-                if (increaseGreen)
-                {
-                    if (greenValue < 1)
-                        greenValue += .1f;
-                    else
-                        increaseGreen = false;
-                }
-                else
-                {
-                    if (greenValue > 0)
-                        greenValue -= .1f;
-                    else
-                        increaseGreen = true;
-                }
             }
 
             if (input.IsKeyDown(Keys.D))
@@ -125,7 +114,7 @@ namespace OwnRendere
                 position.X -= speed;
 
             shader.Use();
-            int positionLocation = GL.GetUniformLocation(shader.Handle, "offset");
+            int positionLocation = GL.GetUniformLocation(shader.handle, "offset");
             GL.Uniform2(positionLocation, position);
         }
 

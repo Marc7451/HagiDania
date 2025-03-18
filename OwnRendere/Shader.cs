@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,7 +10,9 @@ namespace OwnRendere
 {
     public class Shader
     {
-        public int Handle;
+        public int handle;
+        private bool disposedValue = false;
+
         public Shader(string vertexPath, string fragmentPath)
         {
             string vertexSource = File.ReadAllText(vertexPath);
@@ -24,14 +27,14 @@ namespace OwnRendere
             CompileShader(fragmentShader);
 
             // Opret program og link shaderne
-            Handle = GL.CreateProgram();
-            GL.AttachShader(Handle, vertexShader);
-            GL.AttachShader(Handle, fragmentShader);
-            LinkProgram(Handle);
+            handle = GL.CreateProgram();
+            GL.AttachShader(handle, vertexShader);
+            GL.AttachShader(handle, fragmentShader);
+            LinkProgram(handle);
 
             // Slet shaders efter de er linket
-            GL.DetachShader(Handle, vertexShader);
-            GL.DetachShader(Handle, fragmentShader);
+            GL.DetachShader(handle, vertexShader);
+            GL.DetachShader(handle, fragmentShader);
             GL.DeleteShader(vertexShader);
             GL.DeleteShader(fragmentShader);
         }
@@ -42,7 +45,8 @@ namespace OwnRendere
             GL.GetShader(shader, ShaderParameter.CompileStatus, out var code);
             if (code != (int)All.True)
             {
-                var infoLog = GL.GetShaderInfoLog(shader);
+                string infoLog = GL.GetShaderInfoLog(shader);
+                Console.WriteLine($"Shader Compilation Error ({shader}):\n{infoLog}");
                 throw new Exception($"Error occurred whilst compiling Shader({shader}).\n\n{infoLog}");
             }
         }
@@ -53,21 +57,23 @@ namespace OwnRendere
             GL.GetProgram(program, GetProgramParameterName.LinkStatus, out var code);
             if (code != (int)All.True)
             {
-                throw new Exception($"Error occurred whilst linking Program({ program })");
+                string infoLog = GL.GetProgramInfoLog(program);
+                Console.WriteLine($"Shader Linking Error:\n{infoLog}");
+                throw new Exception($"Error occurred whilst linking Program({program}):\n{infoLog}");
             }
         }
 
         public void Use()
         {
-            GL.UseProgram(Handle);
+            GL.UseProgram(handle);
         }
 
-        private bool disposedValue = false;
+        
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
             {
-                GL.DeleteProgram(Handle);
+                GL.DeleteProgram(handle);
                 disposedValue = true;
             }
         }
@@ -86,7 +92,13 @@ namespace OwnRendere
 
         public int GetAttribLocation(string attribName)
         {
-            return GL.GetAttribLocation(Handle, attribName);
+            return GL.GetAttribLocation(handle, attribName);
+        }
+
+        public void SetInt(string name, int value)
+        {
+            int location = GL.GetUniformLocation(handle, name);
+            GL.Uniform1(location, value);
         }
     }
 }

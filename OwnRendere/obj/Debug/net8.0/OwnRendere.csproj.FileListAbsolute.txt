@@ -33,3 +33,5 @@ C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Shaders\Sh
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Shaders\Shader.vert
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\StbImageSharp.dll
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\obj\Debug\net8.0\OwnRendere.sourcelink.json
+C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Textures\wall.jpg
+C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Textures\AragonTexUdenBaggrund.png
