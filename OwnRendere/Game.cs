@@ -3,6 +3,7 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using System.Diagnostics;
 
 namespace OwnRendere
 {
@@ -21,6 +22,9 @@ namespace OwnRendere
         private Shader shader;
         private Texture texture0;
         private Texture texture1;
+
+        //moveing texture
+        Stopwatch timer = new Stopwatch();
 
         float[] vertices =
         {
@@ -46,6 +50,8 @@ namespace OwnRendere
         protected override void OnLoad()
         {
             base.OnLoad();
+
+            timer.Start();
 
             // Indlæs tekstur
             texture0 = new Texture("Textures/wall.jpg");
@@ -73,6 +79,8 @@ namespace OwnRendere
             GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), 3 * sizeof(float));
             GL.EnableVertexAttribArray(1);
 
+
+
             // Indlæs shaders
             shader = new Shader("Shaders/shader.vert", "Shaders/shader.frag");
             shader.Use();
@@ -89,6 +97,11 @@ namespace OwnRendere
             texture1.Use(TextureUnit.Texture1);
             shader.Use();
             GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
+
+            float time = (float)timer.Elapsed.TotalSeconds;
+            int timeLocation = GL.GetUniformLocation(shader.handle, "time");
+            GL.Uniform1(timeLocation, time);
+
             SwapBuffers();
         }
 
