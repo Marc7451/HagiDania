@@ -31,3 +31,5 @@ C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\obj\Debug\net8.0\OwnRendere
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\obj\Debug\net8.0\ref\OwnRendere.dll
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Shaders\Shader.frag
 C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\Shaders\Shader.vert
+C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\bin\Debug\net8.0\StbImageSharp.dll
+C:\Undervisning\ComputerGrafik\OwnRendere\OwnRendere\obj\Debug\net8.0\OwnRendere.sourcelink.json
