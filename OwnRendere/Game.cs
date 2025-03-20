@@ -12,10 +12,6 @@ namespace OwnRendere
         private Color4 backgroundColor = new Color4(0.2f, 0.1f, 0.1f, 1.0f);
         private bool isFullscreen = false;
 
-        // Position og hastighed
-        Vector2 position = new Vector2(0, 0);
-        float speed = .01f;
-
         private int vertexArrayObject;
         private int vertexBufferObject;
         private int elementBufferObject;
@@ -23,22 +19,56 @@ namespace OwnRendere
         private Texture texture0;
         private Texture texture1;
 
+        //Cam
+        private Vector3 cameraPosition = new Vector3(0.0f, 0.0f, 3.0f);
+        private Vector3 cameraFront = new Vector3(0.0f, 0.0f, -1.0f);
+        private Vector3 cameraUp = new Vector3(0.0f, 1.0f, 0.0f);
+        private float cameraSpeed = 0.1f;
+        //Tilføj en yaw-værdi til at holde styr på rotationen
+        private float yaw = -90.0f; // Startværdien sikrer at vi kigger langs -Z-aksen
+        private float rotationSpeed = 2.0f; // Justér rotationshastigheden
+
         //moveing texture
         Stopwatch timer = new Stopwatch();
 
         float[] vertices =
         {
-            // Position        // Texture coords
-             0.5f,  0.5f, 0.0f,  1.0f, 1.0f, // Top Right
-             0.5f, -0.5f, 0.0f,  1.0f, 0.0f, // Bottom Right
-            -0.5f, -0.5f, 0.0f,  0.0f, 0.0f, // Bottom Left
-            -0.5f,  0.5f, 0.0f,  0.0f, 1.0f  // Top Left
-        };
-
-        uint[] indices =
-        {
-            0, 1, 3, // Første trekant
-            1, 2, 3  // Anden trekant
+            -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
+            0.5f, -0.5f, -0.5f, 1.0f, 0.0f,
+            0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+            0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+            -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
+            -0.5f, -0.5f, -0.5f, 0.0f, 0.0f,
+            -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+            0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 1.0f,
+            -0.5f, 0.5f, 0.5f, 0.0f, 1.0f,
+            -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+            -0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            -0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+            -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+            -0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+            0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            0.5f, -0.5f, -0.5f, 1.0f, 1.0f,
+            0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+            0.5f, -0.5f, 0.5f, 1.0f, 0.0f,
+            -0.5f, -0.5f, 0.5f, 0.0f, 0.0f,
+            -0.5f, -0.5f, -0.5f, 0.0f, 1.0f,
+            -0.5f, 0.5f, -0.5f, 0.0f, 1.0f,
+            0.5f, 0.5f, -0.5f, 1.0f, 1.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            0.5f, 0.5f, 0.5f, 1.0f, 0.0f,
+            -0.5f, 0.5f, 0.5f, 0.0f, 0.0f,
+            -0.5f, 0.5f, -0.5f, 0.0f, 1.0f
         };
 
         public Game(GameWindowSettings gameWindowSettings, NativeWindowSettings nativeWindowSettings) : base(gameWindowSettings, nativeWindowSettings)
@@ -50,6 +80,8 @@ namespace OwnRendere
         protected override void OnLoad()
         {
             base.OnLoad();
+
+            GL.Enable(EnableCap.DepthTest);
 
             timer.Start();
 
@@ -69,7 +101,7 @@ namespace OwnRendere
             // Opret EBO (Element Buffer Object) for at bruge `indices`
             elementBufferObject = GL.GenBuffer();
             GL.BindBuffer(BufferTarget.ElementArrayBuffer, elementBufferObject);
-            GL.BufferData(BufferTarget.ElementArrayBuffer, indices.Length * sizeof(uint), indices, BufferUsageHint.StaticDraw);
+            GL.BufferData(BufferTarget.ElementArrayBuffer, vertices.Length * sizeof(uint), vertices, BufferUsageHint.StaticDraw);
 
             // Position (layout = 0)
             GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 0);
@@ -81,26 +113,41 @@ namespace OwnRendere
 
 
 
+
             // Indlæs shaders
             shader = new Shader("Shaders/shader.vert", "Shaders/shader.frag");
             shader.Use();
             shader.SetInt("texture0", 0);
             shader.SetInt("texture1", 1);
+            //CalculateAndSetTransform();
+
+            Matrix4 model = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(-55.0f));
+            Matrix4 cameraModel = Matrix4.CreateTranslation(0.0f, 0.0f, 3);
+            Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
+            shader.SetMatrix("view", view);
+            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X /
+            (float)Size.Y, 0.1f, 100.0f);
+            shader.SetMatrix("mvp", model * view * projection);
         }
 
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             base.OnRenderFrame(args);
-            GL.Clear(ClearBufferMask.ColorBufferBit);
+            GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.BindVertexArray(vertexArrayObject);
             texture0.Use(TextureUnit.Texture0);
             texture1.Use(TextureUnit.Texture1);
             shader.Use();
-            GL.DrawElements(PrimitiveType.Triangles, indices.Length, DrawElementsType.UnsignedInt, 0);
+            GL.DrawArrays(PrimitiveType.Triangles, 0, vertices.Length);
 
             float time = (float)timer.Elapsed.TotalSeconds;
             int timeLocation = GL.GetUniformLocation(shader.handle, "time");
             GL.Uniform1(timeLocation, time);
+
+            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
+            Matrix4 model = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(-55.0f));
+            Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
+            shader.SetMatrix("mvp", model * view * projection);
 
             SwapBuffers();
         }
@@ -121,15 +168,35 @@ namespace OwnRendere
                 ToggleFullscreen();
             }
 
-            if (input.IsKeyDown(Keys.D))
-                position.X += speed;
+            // Kamera bevægelse
+            if (input.IsKeyDown(Keys.W))
+                cameraPosition += cameraFront * cameraSpeed;  // Fremad
+            if (input.IsKeyDown(Keys.S))
+                cameraPosition -= cameraFront * cameraSpeed;  // Bagud
             if (input.IsKeyDown(Keys.A))
-                position.X -= speed;
+                cameraPosition -= Vector3.Normalize(Vector3.Cross(cameraFront, cameraUp)) * cameraSpeed;  // Venstre
+            if (input.IsKeyDown(Keys.D))
+                cameraPosition += Vector3.Normalize(Vector3.Cross(cameraFront, cameraUp)) * cameraSpeed;  // Højre
 
+            // Rotation om Y-aksen
+            if (input.IsKeyDown(Keys.Q))
+                yaw -= rotationSpeed;  // Roter mod venstre
+            if (input.IsKeyDown(Keys.E))
+                yaw += rotationSpeed;  // Roter mod højre
+
+            // Opdater cameraFront baseret på yaw-værdien
+            Vector3 newFront;
+            newFront.X = MathF.Cos(MathHelper.DegreesToRadians(yaw));
+            newFront.Y = 0.0f;
+            newFront.Z = MathF.Sin(MathHelper.DegreesToRadians(yaw));
+            cameraFront = Vector3.Normalize(newFront);
+
+            // Opdater view matrix
+            Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
             shader.Use();
-            int positionLocation = GL.GetUniformLocation(shader.handle, "offset");
-            GL.Uniform2(positionLocation, position);
+            shader.SetMatrix("view", view);
         }
+
 
         private void ToggleFullscreen()
         {

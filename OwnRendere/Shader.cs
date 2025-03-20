@@ -1,4 +1,5 @@
 ﻿using OpenTK.Graphics.OpenGL4;
+using OpenTK.Mathematics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -99,6 +100,12 @@ namespace OwnRendere
         {
             int location = GL.GetUniformLocation(handle, name);
             GL.Uniform1(location, value);
+        }
+
+        public void SetMatrix(string name, Matrix4 transform)
+        {
+            int location = GL.GetUniformLocation(handle, name);
+            GL.UniformMatrix4(location, true, ref transform);
         }
     }
 }

@@ -7,10 +7,18 @@ uniform sampler2D texture0;
 uniform sampler2D texture1;
 uniform float time;
 
+float speed = 0.3f;
+vec2 pivot = vec2(0.5, 0.5);
+
 void main()
 {
-    vec2 movingTexCoord = texCoord;
-    movingTexCoord.x += time * 0.3; 
+    float angle = time * speed; // Rotation over tid
+    mat2 rotationMatrix = mat2(
+        cos(angle), -sin(angle),
+        sin(angle),  cos(angle)
+    );
+    
+    vec2 movingTexCoord = rotationMatrix * texCoord;
 
     vec4 color0 = texture(texture0, texCoord); // Destination
     vec4 color1 = texture(texture1, movingTexCoord); // Source
