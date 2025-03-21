@@ -3,6 +3,7 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using OwnRendere.Shaders;
 using System.Diagnostics;
 
 namespace OwnRendere
@@ -71,6 +72,8 @@ namespace OwnRendere
             -0.5f, 0.5f, -0.5f, 0.0f, 1.0f
         };
 
+        public List<GameObject> gameObjects = new List<GameObject>();
+
         public Game(GameWindowSettings gameWindowSettings, NativeWindowSettings nativeWindowSettings) : base(gameWindowSettings, nativeWindowSettings)
         {
             GL.ClearColor(backgroundColor);
@@ -78,84 +81,45 @@ namespace OwnRendere
         }
 
         protected override void OnLoad()
-        {
+        {            
             base.OnLoad();
 
             GL.Enable(EnableCap.DepthTest);
 
-            timer.Start();
-
-            // Indlæs tekstur
             texture0 = new Texture("Textures/wall.jpg");
             texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+            Dictionary<string, object> uniforms = new Dictionary<string, object>();
+            uniforms.Add("texture0", texture0);
+            uniforms.Add("texture1", texture1);
+            Material mat = new Material("Shaders/shader.vert",
+            "Shaders/shader.frag", uniforms);
+            Renderer rend = new Renderer(mat, new TriangleMesh());
+            Renderer rend2 = new Renderer(mat, new CubeMesh());
 
-            // Opret VBO (Vertex Buffer Object)
-            vertexBufferObject = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ArrayBuffer, vertexBufferObject);
-            GL.BufferData(BufferTarget.ArrayBuffer, vertices.Length * sizeof(float), vertices, BufferUsageHint.StaticDraw);
+            GameObject triangle = new GameObject(rend, this);
+            gameObjects.Add(triangle);
 
-            // Opret VAO (Vertex Array Object)
-            vertexArrayObject = GL.GenVertexArray();
-            GL.BindVertexArray(vertexArrayObject);
-
-            // Opret EBO (Element Buffer Object) for at bruge `indices`
-            elementBufferObject = GL.GenBuffer();
-            GL.BindBuffer(BufferTarget.ElementArrayBuffer, elementBufferObject);
-            GL.BufferData(BufferTarget.ElementArrayBuffer, vertices.Length * sizeof(uint), vertices, BufferUsageHint.StaticDraw);
-
-            // Position (layout = 0)
-            GL.VertexAttribPointer(0, 3, VertexAttribPointerType.Float, false, 5 * sizeof(float), 0);
-            GL.EnableVertexAttribArray(0);
-
-            // Texture koordinater (layout = 1)
-            GL.VertexAttribPointer(1, 2, VertexAttribPointerType.Float, false, 5 * sizeof(float), 3 * sizeof(float));
-            GL.EnableVertexAttribArray(1);
-
-
-
-
-            // Indlæs shaders
-            shader = new Shader("Shaders/shader.vert", "Shaders/shader.frag");
-            shader.Use();
-            shader.SetInt("texture0", 0);
-            shader.SetInt("texture1", 1);
-            //CalculateAndSetTransform();
-
-            Matrix4 model = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(-55.0f));
-            Matrix4 cameraModel = Matrix4.CreateTranslation(0.0f, 0.0f, 3);
-            Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
-            shader.SetMatrix("view", view);
-            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X /
-            (float)Size.Y, 0.1f, 100.0f);
-            shader.SetMatrix("mvp", model * view * projection);
+            GameObject cube = new GameObject(rend2, this);
+            cube.AddComponent<MoveUpDownBehaviour>();
+            cube.transform.Position = new Vector3(1, 0, 0);
+            gameObjects.Add(cube);
         }
-
+        protected override void OnUpdateFrame(FrameEventArgs args)
+        {
+            base.OnUpdateFrame(args);
+            gameObjects.ForEach(x => x.Update(args));
+        }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             base.OnRenderFrame(args);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
-            GL.BindVertexArray(vertexArrayObject);
-            texture0.Use(TextureUnit.Texture0);
-            texture1.Use(TextureUnit.Texture1);
-            shader.Use();
-            GL.DrawArrays(PrimitiveType.Triangles, 0, vertices.Length);
-
-            float time = (float)timer.Elapsed.TotalSeconds;
-            int timeLocation = GL.GetUniformLocation(shader.handle, "time");
-            GL.Uniform1(timeLocation, time);
-
-            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(45.0f), (float)Size.X / (float)Size.Y, 0.1f, 100.0f);
-            Matrix4 model = Matrix4.CreateRotationX(MathHelper.DegreesToRadians(-55.0f));
             Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
-            shader.SetMatrix("mvp", model * view * projection);
-
+            Matrix4 projection = Matrix4.CreatePerspectiveFieldOfView(MathHelper.DegreesToRadians(60.0f),
+            (float)Size.X / (float)Size.Y, 0.3f, 1000.0f);
+            gameObjects.ForEach(x => x.Draw(view * projection));
             SwapBuffers();
-        }
 
-        protected override void OnUpdateFrame(FrameEventArgs args)
-        {
-            base.OnUpdateFrame(args);
-
+            //Input
             KeyboardState input = KeyboardState;
 
             if (input.IsKeyDown(Keys.Escape))
@@ -190,13 +154,7 @@ namespace OwnRendere
             newFront.Y = 0.0f;
             newFront.Z = MathF.Sin(MathHelper.DegreesToRadians(yaw));
             cameraFront = Vector3.Normalize(newFront);
-
-            // Opdater view matrix
-            Matrix4 view = Matrix4.LookAt(cameraPosition, cameraPosition + cameraFront, cameraUp);
-            shader.Use();
-            shader.SetMatrix("view", view);
         }
-
 
         private void ToggleFullscreen()
         {

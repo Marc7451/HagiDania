@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\behaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\behaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\moveupdownbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\moveupdownbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -26,28 +42,94 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 5,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
+              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
+              "RelativeToolTip": "OwnRendere\\Game.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAkwFsAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-17T09:04:50.906Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "MoveUpDownBehaviour.cs",
+              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\MoveUpDownBehaviour.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\MoveUpDownBehaviour.cs",
+              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\MoveUpDownBehaviour.cs",
+              "RelativeToolTip": "OwnRendere\\MoveUpDownBehaviour.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAADwvxUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:28:29.379Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Behaviour.cs",
+              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Behaviour.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Behaviour.cs",
+              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Behaviour.cs",
+              "RelativeToolTip": "OwnRendere\\Behaviour.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAswBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T11:21:29.571Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Material.cs",
+              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Material.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Material.cs",
+              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Material.cs",
+              "RelativeToolTip": "OwnRendere\\Material.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAYwDUAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:03:32.15Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\GameObject.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Shaders\\GameObject.cs",
+              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\GameObject.cs",
+              "RelativeToolTip": "OwnRendere\\Shaders\\GameObject.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwCkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-21T09:01:06.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Shader.cs",
               "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shader.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Shader.cs",
               "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shader.cs",
               "RelativeToolTip": "OwnRendere\\Shader.cs",
-              "ViewState": "AgIAAFwAAAAAAAAAAAApwGYAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAgwGkAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T12:47:04.993Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Shader.vert",
               "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.vert",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\Shader.vert",
@@ -60,28 +142,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Shader.frag",
               "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.frag",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\Shader.frag",
               "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.frag",
               "RelativeToolTip": "OwnRendere\\Shaders\\Shader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAmwAgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-17T10:47:40.041Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
-              "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAAKsAAAAAAAAAAAAIwLoAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T09:04:50.906Z",
               "EditorCaption": ""
             }
           ]
