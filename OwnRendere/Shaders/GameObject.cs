@@ -33,9 +33,25 @@ namespace OwnRendere.Shaders
             }
             return null;
         }
-        public void AddComponent<T>() where T : Behaviour
+        public void AddComponent<T>(params object?[]? args) where T : Behaviour
         {
-            behaviours.Add(Activator.CreateInstance(typeof(T), this, gameWindow) as T);
+            if (args == null)
+            {
+                behaviours.Add(Activator.CreateInstance(typeof(T), this, gameWindow) as T);
+            }
+            else
+            {
+                int initialParameters = 2;
+                int totalParams = args.Length + initialParameters;
+                object?[]? objects = new object[totalParams];
+                objects[0] = this;
+                objects[1] = gameWindow;
+                for (int i = initialParameters; i < totalParams; i++)
+                {
+                    objects[i] = args[i - 2];
+                }
+                behaviours.Add(Activator.CreateInstance(typeof(T), objects) as T);
+            }
         }
         public void Update(FrameEventArgs args)
         {
@@ -46,7 +62,8 @@ namespace OwnRendere.Shaders
         }
         public void Draw(Matrix4 vp)
         {
-            renderer.Draw(transform.CalculateModel() * vp);
+            if(renderer != null)
+                renderer.Draw(transform.CalculateModel() * vp);
         }
     }
 }
