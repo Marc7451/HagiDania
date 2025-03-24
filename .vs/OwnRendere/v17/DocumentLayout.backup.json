@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shapes\\planemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shapes\\planemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shapes\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shapes\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +32,7 @@
               "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAIwEIAAAA8AAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAowEIAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T09:04:50.906Z",
               "IsPinned": true,
@@ -45,27 +45,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "PlaneMesh.cs",
-              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shapes\\PlaneMesh.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Shapes\\PlaneMesh.cs",
-              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shapes\\PlaneMesh.cs",
-              "RelativeToolTip": "OwnRendere\\Shapes\\PlaneMesh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
+              "Title": "GameObject.cs",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\GameObject.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Shaders\\GameObject.cs",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\GameObject.cs",
+              "RelativeToolTip": "OwnRendere\\Shaders\\GameObject.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAgwEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T11:19:42.829Z",
+              "WhenOpened": "2025-03-24T11:37:07.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CubeMesh.cs",
-              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shapes\\CubeMesh.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Shapes\\CubeMesh.cs",
-              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shapes\\CubeMesh.cs",
-              "RelativeToolTip": "OwnRendere\\Shapes\\CubeMesh.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAQwDIAAAAAAAAAAAAAAA==",
+              "Title": "Renderer.cs",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Renderer.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Renderer.cs",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Renderer.cs",
+              "RelativeToolTip": "OwnRendere\\Renderer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T11:19:14.329Z",
+              "WhenOpened": "2025-03-24T11:36:00.036Z",
               "EditorCaption": ""
             }
           ]

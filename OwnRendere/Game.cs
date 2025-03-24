@@ -19,7 +19,9 @@ namespace OwnRendere
 
 
         public List<GameObject> gameObjects = new List<GameObject>();
+        //UI
         public List<GameObject> UI = new List<GameObject>();
+        private Matrix4 uiProjection;
 
         Camera camera;
 
@@ -31,9 +33,7 @@ namespace OwnRendere
 
         protected override void OnLoad()
         {            
-            base.OnLoad();
-
-            
+            base.OnLoad();            
 
             texture0 = new Texture("Textures/wall.jpg");
             texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
@@ -64,7 +64,8 @@ namespace OwnRendere
 
             //Place
             GameObject plane = new GameObject(rend3, this);
-            plane.transform.Position = new Vector3(.5f, 0, -1);
+            plane.transform.Position = new Vector3(200, 400, 0);
+            plane.transform.Scale = new Vector3(50, 50, 1);
             UI.Add(plane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
@@ -81,8 +82,12 @@ namespace OwnRendere
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
             GL.Enable(EnableCap.DepthTest);
             gameObjects.ForEach(x => x.Draw(camera.GetViewProjection()));
+
+            //UI
             GL.Disable(EnableCap.DepthTest);
-            UI.ForEach(x => x.Draw(camera.GetViewProjection()));
+            uiProjection = Matrix4.CreateOrthographicOffCenter(0, Size.X, 0, Size.Y, -1, 1);
+            UI.ForEach(x => x.Draw(uiProjection));
+            
             SwapBuffers();
 
             //Input
