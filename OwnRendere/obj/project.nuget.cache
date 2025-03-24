@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "HlX1TW/j+0g=",
+  "dgSpecHash": "Ivkafrjnero=",
   "success": true,
-  "projectFilePath": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\OwnRendere.csproj",
+  "projectFilePath": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Anders\\.nuget\\packages\\opentk\\4.9.3\\opentk.4.9.3.nupkg.sha512",
     "C:\\Users\\Anders\\.nuget\\packages\\opentk.audio.openal\\4.9.3\\opentk.audio.openal.4.9.3.nupkg.sha512",
