@@ -4,6 +4,7 @@ using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
 using OwnRendere.Shaders;
+using OwnRendere.Shapes;
 using System.Diagnostics;
 
 namespace OwnRendere
@@ -18,6 +19,7 @@ namespace OwnRendere
 
 
         public List<GameObject> gameObjects = new List<GameObject>();
+        public List<GameObject> UI = new List<GameObject>();
 
         Camera camera;
 
@@ -31,17 +33,17 @@ namespace OwnRendere
         {            
             base.OnLoad();
 
-            GL.Enable(EnableCap.DepthTest);
+            
 
             texture0 = new Texture("Textures/wall.jpg");
             texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
             Dictionary<string, object> uniforms = new Dictionary<string, object>();
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);
-            Material mat = new Material("Shaders/shader.vert",
-            "Shaders/shader.frag", uniforms);
+            Material mat = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
             Renderer rend = new Renderer(mat, new TriangleMesh());
             Renderer rend2 = new Renderer(mat, new CubeMesh());
+            Renderer rend3 = new Renderer(mat, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -50,24 +52,37 @@ namespace OwnRendere
             camera = cam.GetComponent<Camera>();
             gameObjects.Add(cam);
 
+            //Triangle
             GameObject triangle = new GameObject(rend, this);
             gameObjects.Add(triangle);
 
+            //Cube
             GameObject cube = new GameObject(rend2, this);
             cube.AddComponent<MoveUpDownBehaviour>();
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
+
+            //Place
+            GameObject plane = new GameObject(rend3, this);
+            plane.transform.Position = new Vector3(.5f, 0, -1);
+            UI.Add(plane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
             base.OnUpdateFrame(args);
+            
             gameObjects.ForEach(x => x.Update(args));
+            UI.ForEach(x => x.Update(args));
+
         }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             base.OnRenderFrame(args);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+            GL.Enable(EnableCap.DepthTest);
             gameObjects.ForEach(x => x.Draw(camera.GetViewProjection()));
+            GL.Disable(EnableCap.DepthTest);
+            UI.ForEach(x => x.Draw(camera.GetViewProjection()));
             SwapBuffers();
 
             //Input
