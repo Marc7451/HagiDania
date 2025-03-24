@@ -3,6 +3,7 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
+using OwnRendere.Primitive;
 using OwnRendere.Shaders;
 using OwnRendere.Shapes;
 using System.Diagnostics;
@@ -49,7 +50,7 @@ namespace OwnRendere
             texture2 = new Texture("Sprites/round_brown.png");
             UI_Images.Add("texture2", texture2);
             Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
-            Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
+            Renderer ui = new Renderer(uiMaterial, new UI_Plane());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -71,7 +72,7 @@ namespace OwnRendere
             //Place
             GameObject plane = new GameObject(ui, this);
             plane.transform.Position = new Vector3(200, 400, 0);
-            plane.transform.Scale = new Vector3(50, 50, 1);
+            plane.transform.Scale = new Vector3(100, 100, 1);
             UI.Add(plane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)

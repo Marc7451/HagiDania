@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "C:\\Undervisning\\HagiDania\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shaders\\ui_shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\ui_shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shaders\\ui_shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\ui_shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
@@ -19,8 +11,20 @@
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\shaders\\ui_shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\ui_shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\primitive\\ui_plane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\primitive\\ui_plane.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\sprites\\round_brown.png||{58961B49-13E0-48C0-9258-13CBC4D40279}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\sprites\\round_brown.png||{58961B49-13E0-48C0-9258-13CBC4D40279}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -38,17 +42,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAiwDIAAABsAAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAYwEoAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T09:04:50.906Z",
               "IsPinned": true,
@@ -60,59 +64,71 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
+              "Title": "UI_Plane.cs",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Primitive\\UI_Plane.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Primitive\\UI_Plane.cs",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Primitive\\UI_Plane.cs",
+              "RelativeToolTip": "OwnRendere\\Primitive\\UI_Plane.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T13:54:13.161Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "round_brown.png",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Sprites\\round_brown.png",
+              "RelativeDocumentMoniker": "OwnRendere\\Sprites\\round_brown.png",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Sprites\\round_brown.png",
+              "RelativeToolTip": "OwnRendere\\Sprites\\round_brown.png",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001533|",
+              "WhenOpened": "2025-03-24T13:34:29.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "Shader.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shader.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Shader.cs",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shader.cs",
               "RelativeToolTip": "OwnRendere\\Shader.cs",
-              "ViewState": "AgIAAHgAAAAAAAAAAAAuwJEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAADgvzIAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T12:56:56.913Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Material.cs",
-              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Material.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Material.cs",
-              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Material.cs",
-              "RelativeToolTip": "OwnRendere\\Material.cs",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAUwFAAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T12:52:11.427Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ui_shader.frag",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\ui_shader.frag",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\ui_shader.frag",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\ui_shader.frag",
               "RelativeToolTip": "OwnRendere\\Shaders\\ui_shader.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-24T12:49:06.907Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ui_shader.vert",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\ui_shader.vert",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\ui_shader.vert",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\ui_shader.vert",
               "RelativeToolTip": "OwnRendere\\Shaders\\ui_shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
               "WhenOpened": "2025-03-24T12:48:35.901Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "GameObject.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Shaders\\GameObject.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\GameObject.cs",
@@ -125,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Renderer.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Renderer.cs",
