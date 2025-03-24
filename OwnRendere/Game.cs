@@ -45,12 +45,16 @@ namespace OwnRendere
             Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
             Renderer rend = new Renderer(mat_3D, new TriangleMesh());
             Renderer rend2 = new Renderer(mat_3D, new CubeMesh());
+            
 
             Dictionary<string, object> UI_Images = new Dictionary<string, object>();
             texture2 = new Texture("Sprites/round_brown.png");
             UI_Images.Add("texture2", texture2);
             Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
             Renderer ui = new Renderer(uiMaterial, new UI_Plane());
+
+            //Test
+            Renderer rend3 = new Renderer(uiMaterial, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -69,10 +73,15 @@ namespace OwnRendere
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
 
-            //Place
+            //Test plane
+            GameObject test_plane = new GameObject(rend3, this);
+            test_plane.transform.Position = new Vector3(-1, 0, 0);
+            gameObjects.Add(test_plane);
+
+            //Plane
             GameObject plane = new GameObject(ui, this);
-            plane.transform.Position = new Vector3(200, 400, 0);
-            plane.transform.Scale = new Vector3(100, 100, 1);
+            plane.transform.Position = new Vector3(Size.X / 2, Size.Y / 2, 0);
+            plane.transform.Scale = new Vector3(300, 300, 1);
             UI.Add(plane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
