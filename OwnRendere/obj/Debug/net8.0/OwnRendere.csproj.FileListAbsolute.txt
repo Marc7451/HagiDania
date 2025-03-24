@@ -72,3 +72,6 @@ C:\Undervisning\HagiDania\OwnRendere\obj\Debug\net8.0\refint\OwnRendere.dll
 C:\Undervisning\HagiDania\OwnRendere\obj\Debug\net8.0\OwnRendere.pdb
 C:\Undervisning\HagiDania\OwnRendere\obj\Debug\net8.0\OwnRendere.genruntimeconfig.cache
 C:\Undervisning\HagiDania\OwnRendere\obj\Debug\net8.0\ref\OwnRendere.dll
+C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Sprites\round_brown.png
+C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.frag
+C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.vert

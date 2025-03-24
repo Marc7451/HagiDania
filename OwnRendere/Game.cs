@@ -17,6 +17,7 @@ namespace OwnRendere
         private Texture texture0;
         private Texture texture1;
 
+        private Texture texture2;
 
         public List<GameObject> gameObjects = new List<GameObject>();
         //UI
@@ -40,10 +41,15 @@ namespace OwnRendere
             Dictionary<string, object> uniforms = new Dictionary<string, object>();
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);
-            Material mat = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
-            Renderer rend = new Renderer(mat, new TriangleMesh());
-            Renderer rend2 = new Renderer(mat, new CubeMesh());
-            Renderer rend3 = new Renderer(mat, new PlaneMesh());
+            Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
+            Renderer rend = new Renderer(mat_3D, new TriangleMesh());
+            Renderer rend2 = new Renderer(mat_3D, new CubeMesh());
+
+            Dictionary<string, object> UI_Images = new Dictionary<string, object>();
+            texture2 = new Texture("Sprites/round_brown.png");
+            UI_Images.Add("texture2", texture2);
+            Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
+            Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -63,7 +69,7 @@ namespace OwnRendere
             gameObjects.Add(cube);
 
             //Place
-            GameObject plane = new GameObject(rend3, this);
+            GameObject plane = new GameObject(ui, this);
             plane.transform.Position = new Vector3(200, 400, 0);
             plane.transform.Scale = new Vector3(50, 50, 1);
             UI.Add(plane);
