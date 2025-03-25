@@ -10,6 +10,7 @@ namespace OwnRendere
         private Dictionary<int, Texture> textures = new Dictionary<int, Texture>();
 
         private bool isUI;
+        public Vector2 spriteSize { get; private set; }
 
         public Material(string vertPath, string fragPath, Dictionary<string, object> uniforms, bool isUI = false)
         {
@@ -19,6 +20,15 @@ namespace OwnRendere
             foreach (KeyValuePair<string, object> uniform in uniforms)
             {
                 SetUniform(uniform.Key, uniform.Value);
+            }
+
+            foreach (var uniform in uniforms.Values)
+            {
+                if (uniform is Texture tex)
+                {
+                    spriteSize = new Vector2(tex.Width, tex.Height) * tex.PixelScale;
+                    break;
+                }
             }
         }
 
@@ -78,5 +88,6 @@ namespace OwnRendere
 
             shader.Use();
         }
+
     }
 }

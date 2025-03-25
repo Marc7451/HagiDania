@@ -3,8 +3,6 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
-using OwnRendere.Primitive;
-using OwnRendere.Shaders;
 using OwnRendere.Shapes;
 using System.Diagnostics;
 
@@ -37,8 +35,8 @@ namespace OwnRendere
         {            
             base.OnLoad();            
 
-            texture0 = new Texture("Textures/wall.jpg");
-            texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+            texture0 = new Texture("Textures/wall.jpg", .2f);
+            texture1 = new Texture("Textures/AragonTexUdenBaggrund.png", .2f);
             Dictionary<string, object> uniforms = new Dictionary<string, object>();
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);
@@ -48,13 +46,10 @@ namespace OwnRendere
             
 
             Dictionary<string, object> UI_Images = new Dictionary<string, object>();
-            texture2 = new Texture("Sprites/round_brown.png");
+            texture2 = new Texture("Sprites/round_brown.png", 100);
             UI_Images.Add("texture2", texture2);
             Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
-            Renderer ui = new Renderer(uiMaterial, new UI_Plane());
-
-            //Test
-            Renderer rend3 = new Renderer(uiMaterial, new PlaneMesh());
+            Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -73,15 +68,10 @@ namespace OwnRendere
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
 
-            //Test plane
-            GameObject test_plane = new GameObject(rend3, this);
-            test_plane.transform.Position = new Vector3(-1, 0, 0);
-            gameObjects.Add(test_plane);
-
             //Plane
             GameObject plane = new GameObject(ui, this);
-            plane.transform.Position = new Vector3(Size.X / 2, Size.Y / 2, 0);
-            plane.transform.Scale = new Vector3(300, 300, 1);
+            plane.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, 0);
+            plane.transform.Scale = new Vector3(1.5f, 1.5f, 1);
             UI.Add(plane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
