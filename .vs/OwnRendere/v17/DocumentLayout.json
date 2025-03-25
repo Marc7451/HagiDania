@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,17 +26,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Mesh.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Mesh.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Mesh.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Mesh.cs",
+              "RelativeToolTip": "OwnRendere\\Mesh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:20:42.513Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "CubeMesh.cs",
               "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CubeMesh.cs",
               "RelativeDocumentMoniker": "OwnRendere\\CubeMesh.cs",
               "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CubeMesh.cs",
               "RelativeToolTip": "OwnRendere\\CubeMesh.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T12:08:55.157Z",
               "EditorCaption": ""
@@ -45,7 +62,7 @@
               "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
               "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowCwAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAD4AAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T09:04:50.906Z",
               "EditorCaption": ""
@@ -58,7 +75,7 @@
               "RelativeDocumentMoniker": "OwnRendere\\CylinderMesh.cs",
               "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CylinderMesh.cs",
               "RelativeToolTip": "OwnRendere\\CylinderMesh.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T12:00:11.482Z",
               "EditorCaption": ""

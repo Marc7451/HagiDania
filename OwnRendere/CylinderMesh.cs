@@ -11,8 +11,8 @@ namespace OwnRendere
 
         public CylinderMesh()
         {
-            GenerateBuffers();   // Brug Mesh-metoden til at loade bufferne
             GenerateCylinder(Segments, Height, Radius);  // Opret vertices & indices
+            GenerateBuffers();   // Brug Mesh-metoden til at loade bufferne
             
         }
 

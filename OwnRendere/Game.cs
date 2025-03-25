@@ -60,7 +60,7 @@ namespace OwnRendere
             gameObjects.Add(cube);
 
             GameObject cylinder = new GameObject(rend3, this);
-            cube.transform.Position = new Vector3(-1, 0, 0);
+            cube.transform.Position = new Vector3(-2, 0, 0);
             gameObjects.Add(cylinder);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)

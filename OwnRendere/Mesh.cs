@@ -10,10 +10,7 @@ namespace OwnRendere
         protected virtual float[] vertices { get; set; }
         protected virtual uint[] indices { get; set; }
 
-        public Mesh()
-        {
-            GenerateBuffers(); //setup based on vertices, indices, etc
-        }
+       
         
         protected virtual void GenerateBuffers()
         {
