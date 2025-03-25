@@ -65,9 +65,10 @@ namespace OwnRendere
             cylinder.transform.Position = new Vector3(-2, 0, 0);
             gameObjects.Add(cylinder);
 
-            GameObject Sphere = new GameObject(rend4, this);
-            Sphere.transform.Position = new Vector3(-1, 0, 0);
-            gameObjects.Add(Sphere);
+            GameObject sphere = new GameObject(rend4, this);
+            sphere.AddComponent<RotateBehaviour>();
+            sphere.transform.Position = new Vector3(-1, 0, 0);
+            gameObjects.Add(sphere);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
