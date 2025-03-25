@@ -57,6 +57,9 @@ namespace OwnRendere
             cube.AddComponent<MoveUpDownBehaviour>();
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
+
+            GameObject inport = LoadeObject("moddels/Suzanne.obj", this);
+            gameObjects.Add(inport);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
@@ -103,6 +106,68 @@ namespace OwnRendere
         {
             base.OnResize(e);
             GL.Viewport(0, 0, Size.X, Size.Y);
+        }
+
+        GameObject LoadeObject(string filename,GameWindow gameWindow)
+        {
+            ObjVolume obj = ObjVolume.LoadFromfile(filename);
+
+            float[] vertices = new float[(obj.faces.Count * 3 * 3) + (obj.faces.Count * 2 * 3)];
+            int verticesIndex = 0;
+            int textrureIndex = 0;
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                vertices[i] = obj.faces[verticesIndex].Item1.Position.X;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item1.Position.Y;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item1.Position.Z;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item1.TextureCoord.X;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item1.TextureCoord.Y;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item2.Position.X;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item2.Position.Y;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item2.Position.Z;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item2.TextureCoord.X;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item2.TextureCoord.Y;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item3.Position.X;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item3.Position.Y;
+                i++;
+                vertices[i] = obj.faces[verticesIndex].Item3.Position.Z;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item3.TextureCoord.X;
+                i++;
+                vertices[i] = obj.faces[textrureIndex].Item3.TextureCoord.Y;
+                verticesIndex++;
+                textrureIndex++;
+            }
+            int[] temp = obj.GetIndices();
+            uint[] indices = new uint[temp.Length];
+            for (int i = 0; i < indices.Length; i++)
+            {
+                indices[i] = (uint)temp[i];
+            }
+
+            CustomMesh customMesh = new CustomMesh(vertices, indices);
+            Texture texture0 = new Texture("Textures/wall.jpg");
+            Texture texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+            Dictionary<string, object> uniforms = new Dictionary<string, object>();
+            uniforms.Add("texture0", texture0);
+            uniforms.Add("texture1", texture1);
+            Material mat = new Material("Shaders/shader.vert",
+            "Shaders/shader.frag", uniforms);
+            Renderer renderer = new(mat, customMesh);
+
+            GameObject gameObject = new(renderer, gameWindow);
+            return gameObject;
         }
     }
 }

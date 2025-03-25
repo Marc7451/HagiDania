@@ -9,10 +9,27 @@
       "OwnRendere/1.0.0": {
         "dependencies": {
           "OpenTK": "4.9.3",
-          "StbImageSharp": "2.30.15"
+          "StbImageSharp": "2.30.15",
+          "System.Drawing.Common": "9.0.3"
         },
         "runtime": {
           "OwnRendere.dll": {}
+        }
+      },
+      "Microsoft.Win32.SystemEvents/9.0.3": {
+        "runtime": {
+          "lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/net8.0/Microsoft.Win32.SystemEvents.dll": {
+            "rid": "win",
+            "assetType": "runtime",
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11113"
+          }
         }
       },
       "OpenTK/4.9.3": {
@@ -167,6 +184,21 @@
           }
         }
       },
+      "System.Drawing.Common/9.0.3": {
+        "dependencies": {
+          "Microsoft.Win32.SystemEvents": "9.0.3"
+        },
+        "runtime": {
+          "lib/net8.0/System.Drawing.Common.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11202"
+          },
+          "lib/net8.0/System.Private.Windows.Core.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.325.11202"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/6.0.0": {}
     }
   },
@@ -175,6 +207,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Microsoft.Win32.SystemEvents/9.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Z0hIB2oeNqPOO0MYD0wkLpEe0LangoF3BSdMLLF5wft/rndYoXhLQvWni1OxymlWj+1adswAps2ZlrPmD9ZhBg==",
+      "path": "microsoft.win32.systemevents/9.0.3",
+      "hashPath": "microsoft.win32.systemevents.9.0.3.nupkg.sha512"
     },
     "OpenTK/4.9.3": {
       "type": "package",
@@ -259,6 +298,13 @@
       "sha512": "sha512-7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
       "path": "stbimagesharp/2.30.15",
       "hashPath": "stbimagesharp.2.30.15.nupkg.sha512"
+    },
+    "System.Drawing.Common/9.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-yDxzWfZGvOtk8zk5apWXP/tmro1Nghn7/4bWS5np5CtwIfiVCC74qCc1qvIsnywvXKzVqIbKXRk09wts+xGfeg==",
+      "path": "system.drawing.common/9.0.3",
+      "hashPath": "system.drawing.common.9.0.3.nupkg.sha512"
     },
     "System.Runtime.CompilerServices.Unsafe/6.0.0": {
       "type": "package",

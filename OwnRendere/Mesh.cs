@@ -12,7 +12,7 @@ namespace OwnRendere
 
         public Mesh()
         {
-            GenerateBuffers(); //setup based on vertices, indices, etc
+            //GenerateBuffers(); //setup based on vertices, indices, etc
         }
         
         protected virtual void GenerateBuffers()
