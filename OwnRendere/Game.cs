@@ -42,7 +42,7 @@ namespace OwnRendere
             "Shaders/shader.frag", uniforms);
             Renderer rend = new Renderer(mat, new TriangleMesh());
             Renderer rend2 = new Renderer(mat, new CubeMesh());
-            Renderer rend3 = new Renderer(mat, new CylinderMesh());
+            Renderer rend3 = new Renderer(mat, new CylinderMesh(36, 1.0f, 0.5f));
 
             //Camera
             GameObject cam = new GameObject(null, this);
