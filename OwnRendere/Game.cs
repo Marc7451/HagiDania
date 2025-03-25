@@ -43,6 +43,8 @@ namespace OwnRendere
             Renderer rend = new Renderer(mat, new TriangleMesh());
             Renderer rend2 = new Renderer(mat, new CubeMesh());
             Renderer rend3 = new Renderer(mat, new CylinderMesh(36, 1.0f, 0.5f));
+            Renderer rend4 = new Renderer(mat, new SphereMesh(36, 36, 0.5f));
+            
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -60,8 +62,12 @@ namespace OwnRendere
             gameObjects.Add(cube);
 
             GameObject cylinder = new GameObject(rend3, this);
-            cube.transform.Position = new Vector3(-2, 0, 0);
+            cylinder.transform.Position = new Vector3(-2, 0, 0);
             gameObjects.Add(cylinder);
+
+            GameObject Sphere = new GameObject(rend4, this);
+            Sphere.transform.Position = new Vector3(-1, 0, 0);
+            gameObjects.Add(Sphere);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {

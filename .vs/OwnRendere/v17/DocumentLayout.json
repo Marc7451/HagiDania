@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\spheremesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\spheremesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\cylindermesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
+              "Title": "SphereMesh.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\SphereMesh.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\SphereMesh.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\SphereMesh.cs",
+              "RelativeToolTip": "OwnRendere\\SphereMesh.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAEUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T12:45:33.414Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Mesh.cs",
               "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Mesh.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Mesh.cs",
@@ -43,7 +60,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CubeMesh.cs",
               "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CubeMesh.cs",
               "RelativeDocumentMoniker": "OwnRendere\\CubeMesh.cs",
@@ -51,25 +68,24 @@
               "RelativeToolTip": "OwnRendere\\CubeMesh.cs",
               "ViewState": "AgIAADAAAAAAAAAAAAAAAEUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:08:55.157Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T12:08:55.157Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
               "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAAwDYAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAACUAAAAAAAAAAAAAwC0AAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T09:04:50.906Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "CylinderMesh.cs",
               "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CylinderMesh.cs",
               "RelativeDocumentMoniker": "OwnRendere\\CylinderMesh.cs",
@@ -77,8 +93,7 @@
               "RelativeToolTip": "OwnRendere\\CylinderMesh.cs",
               "ViewState": "AgIAAB0AAAAAAAAAAAAQwF0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T12:00:11.482Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-25T12:00:11.482Z"
             }
           ]
         }
