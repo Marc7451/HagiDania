@@ -3,6 +3,9 @@ out vec4 outputColor; // Output color of the fragment
 
 in vec2 texCoord; // Input from vertex shader
 
+in vec3 vColor;
+out vec4 CylinderColor;
+
 uniform sampler2D texture0;
 uniform sampler2D texture1;
 uniform float time;
@@ -12,6 +15,8 @@ vec2 pivot = vec2(0.5, 0.5);
 
 void main()
 {
+
+    CylinderColor = vec4(vColor, 1.0);
     float angle = time * speed; // Rotation over tid
     mat2 rotationMatrix = mat2(
         cos(angle), -sin(angle),

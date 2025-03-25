@@ -43,6 +43,10 @@ namespace OwnRendere
             Renderer rend = new Renderer(mat, new TriangleMesh());
             Renderer rend2 = new Renderer(mat, new CubeMesh());
 
+            // Cylinder
+           // Renderer cylinderRenderer = new Renderer(mat, new CylinderMesh());
+            
+
             //Camera
             GameObject cam = new GameObject(null, this);
             cam.AddComponent<Camera>(60.0f, (float)Size.X, (float)Size.Y, 0.3f, 1000.0f);
@@ -57,6 +61,10 @@ namespace OwnRendere
             cube.AddComponent<MoveUpDownBehaviour>();
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
+
+            //GameObject cylinder = new GameObject(cylinderRenderer, this);
+            //cylinder.transform.Position = new Vector3(-1, 0, 0);
+            //gameObjects.Add(cylinder);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {

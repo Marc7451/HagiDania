@@ -1,53 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\",
+  "WorkspaceRootPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\cameramovebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\cameramovebehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\cylindermesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\cylindermesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\cubemesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\mesh.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\transform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\gameobject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\renderer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\behaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\behaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\moveupdownbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\moveupdownbehaviour.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\shader.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\computergrafik\\ownrendere\\ownrendere\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\users\\marc7\\desktop\\visual\\computorgrafik\\github\\hagidania\\ownrendere\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\shaders\\shader.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
@@ -62,160 +34,68 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Game.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Game.cs",
-              "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAowDIAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Mesh.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Mesh.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Mesh.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Mesh.cs",
+              "RelativeToolTip": "OwnRendere\\Mesh.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T09:04:50.906Z",
-              "IsPinned": true,
+              "WhenOpened": "2025-03-25T11:11:35.966Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "CubeMesh.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CubeMesh.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\CubeMesh.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CubeMesh.cs",
+              "RelativeToolTip": "OwnRendere\\CubeMesh.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAAAEQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T10:01:13.414Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CameraMoveBehaviour.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\CameraMoveBehaviour.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\CameraMoveBehaviour.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\CameraMoveBehaviour.cs",
-              "RelativeToolTip": "OwnRendere\\CameraMoveBehaviour.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACUAAAANAAAAAAAAAA==",
+              "Title": "CylinderMesh.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CylinderMesh.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\CylinderMesh.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\CylinderMesh.cs",
+              "RelativeToolTip": "OwnRendere\\CylinderMesh.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T11:57:49.989Z",
+              "WhenOpened": "2025-03-25T09:53:32.12Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Camera.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Camera.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Camera.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Camera.cs",
-              "RelativeToolTip": "OwnRendere\\Camera.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAzwBkAAAAjAAAAAAAAAA==",
+              "Title": "Game.cs",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Game.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Game.cs",
+              "RelativeToolTip": "OwnRendere\\Game.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAlwDYAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T11:48:50.236Z",
+              "WhenOpened": "2025-03-25T09:24:28.084Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Transform.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Transform.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Transform.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Transform.cs",
-              "RelativeToolTip": "OwnRendere\\Transform.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAmwB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T11:45:28.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "MoveUpDownBehaviour.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\MoveUpDownBehaviour.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\MoveUpDownBehaviour.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\MoveUpDownBehaviour.cs",
-              "RelativeToolTip": "OwnRendere\\MoveUpDownBehaviour.cs",
-              "ViewState": "AgIAAAIAAAAAAAAAAADwvxUAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T11:28:29.379Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Behaviour.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Behaviour.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Behaviour.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Behaviour.cs",
-              "RelativeToolTip": "OwnRendere\\Behaviour.cs",
-              "ViewState": "AgIAAAQAAAAAAAAAAAAswBIAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T11:21:29.571Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Material.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Material.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Material.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Material.cs",
-              "RelativeToolTip": "OwnRendere\\Material.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAYwDUAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T09:03:32.15Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "GameObject.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\GameObject.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Shaders\\GameObject.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\GameObject.cs",
-              "RelativeToolTip": "OwnRendere\\Shaders\\GameObject.cs",
-              "ViewState": "AgIAADQAAAAAAAAAAAD4v0EAAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T09:01:06.775Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Renderer.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Renderer.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Renderer.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Renderer.cs",
-              "RelativeToolTip": "OwnRendere\\Renderer.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAswBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-21T12:07:09.405Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Shader.cs",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shader.cs",
-              "RelativeDocumentMoniker": "OwnRendere\\Shader.cs",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shader.cs",
-              "RelativeToolTip": "OwnRendere\\Shader.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAwwGkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T12:47:04.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
               "Title": "Shader.vert",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.vert",
+              "DocumentMoniker": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Shaders\\Shader.vert",
               "RelativeDocumentMoniker": "OwnRendere\\Shaders\\Shader.vert",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.vert",
+              "ToolTip": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\Shaders\\Shader.vert",
               "RelativeToolTip": "OwnRendere\\Shaders\\Shader.vert",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-17T10:47:45.217Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "Shader.frag",
-              "DocumentMoniker": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.frag",
-              "RelativeDocumentMoniker": "OwnRendere\\Shaders\\Shader.frag",
-              "ToolTip": "C:\\Undervisning\\ComputerGrafik\\OwnRendere\\OwnRendere\\Shaders\\Shader.frag",
-              "RelativeToolTip": "OwnRendere\\Shaders\\Shader.frag",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-03-17T10:47:40.041Z"
+              "WhenOpened": "2025-03-17T10:47:45.217Z",
+              "EditorCaption": ""
             }
           ]
         }
