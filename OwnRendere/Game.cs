@@ -17,6 +17,7 @@ namespace OwnRendere
         private Texture texture1;
 
         private Texture texture2;
+        private Texture texture3;
 
         public List<GameObject> gameObjects = new List<GameObject>();
         //UI
@@ -43,13 +44,20 @@ namespace OwnRendere
             Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
             Renderer rend = new Renderer(mat_3D, new TriangleMesh());
             Renderer rend2 = new Renderer(mat_3D, new CubeMesh());
-            
-
+            //UI
+            //Map
             Dictionary<string, object> UI_Images = new Dictionary<string, object>();
             texture2 = new Texture("Sprites/round_brown.png", 100);
             UI_Images.Add("texture2", texture2);
             Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
             Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
+            Renderer bigUI = new Renderer(uiMaterial, new PlaneMesh());
+            //Dot
+            Dictionary<string, object> dotImages = new Dictionary<string, object>();
+            texture3 = new Texture("Sprites/progress_red_small_border.png", 100);
+            dotImages.Add("texture3", texture3);
+            Material dotMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", dotImages, true);
+            Renderer dot = new Renderer(dotMaterial, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -68,11 +76,22 @@ namespace OwnRendere
             cube.transform.Position = new Vector3(1, 0, 0);
             gameObjects.Add(cube);
 
+            //UI
             //Plane
             GameObject plane = new GameObject(ui, this);
             plane.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, 0);
             plane.transform.Scale = new Vector3(1.5f, 1.5f, 1);
             UI.Add(plane);
+            //Dot
+            GameObject dotObj = new GameObject(dot, this);
+            dotObj.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, -1);
+            dotObj.transform.Scale = new Vector3(1.2f, 1.2f, 1);
+            UI.Add(dotObj);
+            //Plane 2
+            GameObject bigPlane = new GameObject(bigUI, this);
+            bigPlane.transform.Position = new Vector3(Size.X / 2 - 100, Size.Y / 2 + 200, .5f);
+            bigPlane.transform.Scale = new Vector3(3.2f, 3.2f, 1);
+            UI.Add(bigPlane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
@@ -90,10 +109,14 @@ namespace OwnRendere
             gameObjects.ForEach(x => x.Draw(camera.GetViewProjection()));
 
             //UI
+            // Sort UI-listen, så elementer med den største Z-værdi tegnes først
+            UI.Sort((a, b) => b.transform.Position.Z.CompareTo(a.transform.Position.Z));
+
+            // UI rendering
             GL.Disable(EnableCap.DepthTest);
             uiProjection = Matrix4.CreateOrthographicOffCenter(0, Size.X, 0, Size.Y, -1, 1);
             UI.ForEach(x => x.Draw(uiProjection));
-            
+
             SwapBuffers();
 
             //Input
