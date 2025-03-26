@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[4.9.3, )"
             },
+            "SharpFont": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
             "StbImageSharp": {
               "target": "Package",
               "version": "[2.30.15, )"

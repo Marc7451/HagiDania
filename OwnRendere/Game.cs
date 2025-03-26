@@ -205,8 +205,8 @@ namespace OwnRendere
             }
 
             CustomMesh customMesh = new CustomMesh(vertices, indices);
-            Texture texture0 = new Texture("Textures/wall.jpg");
-            Texture texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+            Texture texture0 = new Texture("Textures/wall.jpg", 0.2f);
+            Texture texture1 = new Texture("Textures/AragonTexUdenBaggrund.png", 0.2f);
             Dictionary<string, object> uniforms = new Dictionary<string, object>();
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);

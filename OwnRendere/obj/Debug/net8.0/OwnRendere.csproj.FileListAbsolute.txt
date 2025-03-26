@@ -78,3 +78,8 @@ C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\Microsoft.Win32.Sys
 C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\System.Drawing.Common.dll
 C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\System.Private.Windows.Core.dll
 C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\runtimes\win\lib\net8.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\SharpFont.dll.config
+C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.frag
+C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.vert
+C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\Sprites\progress_red_small_border.png
+C:\Users\Harbo\Desktop\HagiDania\OwnRendere\bin\Debug\net8.0\Sprites\round_brown.png

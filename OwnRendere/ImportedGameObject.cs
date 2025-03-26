@@ -1,5 +1,4 @@
 ﻿using OpenTK.Windowing.Desktop;
-using OwnRendere.Shaders;
 using System;
 using System.Collections.Generic;
 using System.Linq;
