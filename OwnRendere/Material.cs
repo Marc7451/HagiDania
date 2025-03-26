@@ -1,5 +1,6 @@
 ﻿using OpenTK.Graphics.OpenGL4;
 using OpenTK.Mathematics;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace OwnRendere
 {
@@ -32,13 +33,13 @@ namespace OwnRendere
             }
         }
 
-        public Material(string vertPath, string fragPath, string name, Texture texture)
+        public Material(string vertPath, string fragPath, string name, Texture texture, bool isUI = false)
         {
+            this.isUI = isUI;
             shader = new Shader(vertPath, fragPath);
-            foreach (KeyValuePair<string, object> uniform in uniforms)
-            {
-                SetUniform(uniform.Key, uniform.Value);
-            }
+
+            SetUniform(name, texture);
+            spriteSize = new Vector2(texture.Width, texture.Height) * texture.PixelScale;
         }
 
         public void SetUniform(string name, object uniform)

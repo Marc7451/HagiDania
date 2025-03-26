@@ -43,16 +43,16 @@ namespace OwnRendere
             Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
             //UI
             //Map
-            Dictionary<string, object> UI_Images = new Dictionary<string, object>();
             texture2 = new Texture("Sprites/round_brown.png", 100);
-            UI_Images.Add("texture2", texture2);
-            Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
+            Dictionary<string, object> tImages = new Dictionary<string, object>();
+            tImages.Add("uiTexture", texture2);
+            Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", tImages, true);
             Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
             Renderer bigUI = new Renderer(uiMaterial, new PlaneMesh());
             //Dot
             Dictionary<string, object> dotImages = new Dictionary<string, object>();
             texture3 = new Texture("Sprites/progress_red_small_border.png", 100);
-            dotImages.Add("texture3", texture3);
+            dotImages.Add("uiTexture", texture3);
             Material dotMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", dotImages, true);
             Renderer dot = new Renderer(dotMaterial, new PlaneMesh());
             Material mat = new Material("Shaders/shader.vert",
@@ -83,6 +83,16 @@ namespace OwnRendere
             GameObject inport = LoadeObject("moddels/Suzanne.obj", this);
             inport.transform.Position = new Vector3(-3.5f,0,0);
             gameObjects.Add(inport);
+
+            GameObject cylinder = new GameObject(rend3, this);
+            cylinder.transform.Position = new Vector3(-2, 0, 0);
+            gameObjects.Add(cylinder);
+
+            GameObject sphere = new GameObject(rend4, this);
+            sphere.AddComponent<RotateBehaviour>();
+            sphere.transform.Position = new Vector3(-1, 0, 0);
+            gameObjects.Add(sphere);
+
             //UI
             //Plane
             GameObject plane = new GameObject(ui, this);
@@ -99,14 +109,6 @@ namespace OwnRendere
             bigPlane.transform.Position = new Vector3(Size.X / 2 - 100, Size.Y / 2 + 200, .5f);
             bigPlane.transform.Scale = new Vector3(3.2f, 3.2f, 1);
             UI.Add(bigPlane);
-            GameObject cylinder = new GameObject(rend3, this);
-            cylinder.transform.Position = new Vector3(-2, 0, 0);
-            gameObjects.Add(cylinder);
-
-            GameObject sphere = new GameObject(rend4, this);
-            sphere.AddComponent<RotateBehaviour>();
-            sphere.transform.Position = new Vector3(-1, 0, 0);
-            gameObjects.Add(sphere);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
