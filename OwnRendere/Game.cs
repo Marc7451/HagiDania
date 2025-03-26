@@ -58,6 +58,13 @@ namespace OwnRendere
             dotImages.Add("texture3", texture3);
             Material dotMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", dotImages, true);
             Renderer dot = new Renderer(dotMaterial, new PlaneMesh());
+            Material mat = new Material("Shaders/shader.vert",
+            "Shaders/shader.frag", uniforms);
+            Renderer rend = new Renderer(mat, new TriangleMesh());
+            Renderer rend2 = new Renderer(mat, new CubeMesh());
+            Renderer rend3 = new Renderer(mat, new CylinderMesh(36, 1.0f, 0.5f));
+            Renderer rend4 = new Renderer(mat, new SphereMesh(36, 36, 0.5f));
+            
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -94,6 +101,14 @@ namespace OwnRendere
             bigPlane.transform.Position = new Vector3(Size.X / 2 - 100, Size.Y / 2 + 200, .5f);
             bigPlane.transform.Scale = new Vector3(3.2f, 3.2f, 1);
             UI.Add(bigPlane);
+            GameObject cylinder = new GameObject(rend3, this);
+            cylinder.transform.Position = new Vector3(-2, 0, 0);
+            gameObjects.Add(cylinder);
+
+            GameObject sphere = new GameObject(rend4, this);
+            sphere.AddComponent<RotateBehaviour>();
+            sphere.transform.Position = new Vector3(-1, 0, 0);
+            gameObjects.Add(sphere);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
