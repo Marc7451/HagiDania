@@ -42,8 +42,6 @@ namespace OwnRendere
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);
             Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
-            Renderer rend = new Renderer(mat_3D, new TriangleMesh());
-            Renderer rend2 = new Renderer(mat_3D, new CubeMesh());
             //UI
             //Map
             Dictionary<string, object> UI_Images = new Dictionary<string, object>();
@@ -84,6 +82,7 @@ namespace OwnRendere
             gameObjects.Add(cube);
 
             GameObject inport = LoadeObject("moddels/Suzanne.obj", this);
+            inport.transform.Position = new Vector3(-3.5f,0,0);
             gameObjects.Add(inport);
             //UI
             //Plane
