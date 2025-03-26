@@ -22,6 +22,8 @@ namespace OwnRendere
         //UI
         public List<GameObject> UI = new List<GameObject>();
         private Matrix4 uiProjection;
+        private double uiUpdateTimer = 0.0;
+        private const double uiUpdateInterval = 0.1; 
 
         Camera camera;
 
@@ -48,7 +50,6 @@ namespace OwnRendere
             tImages.Add("uiTexture", texture2);
             Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", tImages, true);
             Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
-            Renderer bigUI = new Renderer(uiMaterial, new PlaneMesh());
             //Dot
             Dictionary<string, object> dotImages = new Dictionary<string, object>();
             texture3 = new Texture("Sprites/progress_red_small_border.png", 100);
@@ -103,20 +104,24 @@ namespace OwnRendere
             GameObject dotObj = new GameObject(dot, this);
             dotObj.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, -1);
             dotObj.transform.Scale = new Vector3(1.2f, 1.2f, 1);
+            dotObj.AddComponent<LoopMovementRightToLeft>(25, 50);
             UI.Add(dotObj);
-            //Plane 2
-            GameObject bigPlane = new GameObject(bigUI, this);
-            bigPlane.transform.Position = new Vector3(Size.X / 2 - 100, Size.Y / 2 + 200, .5f);
-            bigPlane.transform.Scale = new Vector3(3.2f, 3.2f, 1);
-            UI.Add(bigPlane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
             base.OnUpdateFrame(args);
             
             gameObjects.ForEach(x => x.Update(args));
-            UI.ForEach(x => x.Update(args));
 
+            //UI
+            uiUpdateTimer += args.Time;
+            if (uiUpdateTimer >= uiUpdateInterval)
+            {
+                // Sort UI-listen, så elementer med den største Z-værdi tegnes først
+                UI.Sort((a, b) => b.transform.Position.Z.CompareTo(a.transform.Position.Z));
+                UI.ForEach(x => x.Update(args)); //Draw
+                uiUpdateTimer = 0.0; //Reset time
+            }
         }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
@@ -125,14 +130,11 @@ namespace OwnRendere
             GL.Enable(EnableCap.DepthTest);
             gameObjects.ForEach(x => x.Draw(camera.GetViewProjection()));
 
-            //UI
-            // Sort UI-listen, så elementer med den største Z-værdi tegnes først
-            UI.Sort((a, b) => b.transform.Position.Z.CompareTo(a.transform.Position.Z));
-
             // UI rendering
             GL.Disable(EnableCap.DepthTest);
             uiProjection = Matrix4.CreateOrthographicOffCenter(0, Size.X, 0, Size.Y, -1, 1);
             UI.ForEach(x => x.Draw(uiProjection));
+
 
             SwapBuffers();
 
