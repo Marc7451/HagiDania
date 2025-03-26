@@ -7,8 +7,8 @@ namespace OwnRendere
         protected int vertexArrayObject;
         protected int elementBufferObject;
         protected int vertexBufferObject;
-        protected virtual float[] vertices { get; set; }
-        protected virtual uint[] indices { get; set; }
+        public virtual float[] vertices { get; set; }
+        public virtual uint[] indices { get; set; }
 
        
         

@@ -19,7 +19,7 @@ namespace OwnRendere
             List<float> verts = new List<float>();
             List<uint> inds = new List<uint>();
 
-            // 🔵 Generér vertices
+            
             for (int lat = 0; lat <= latitudeBands; lat++)
             {
                 float theta = lat * MathF.PI / latitudeBands;

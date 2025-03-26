@@ -43,11 +43,11 @@ namespace OwnRendere
                 gameObject.transform.Position += gameObject.transform.Right * movementSpeed * (float)args.Time;
             }
 
-            if (input.IsKeyDown(Keys.E)) // Rotate Right (Yaw)
+            if (input.IsKeyDown(Keys.Q)) // Rotate Right (Yaw)
             {
                 yaw += rotationSpeed * (float)args.Time;
             }
-            if (input.IsKeyDown(Keys.Q)) // Rotate Left (Yaw)
+            if (input.IsKeyDown(Keys.E)) // Rotate Left (Yaw)
             {
                 yaw -= rotationSpeed * (float)args.Time;
             }
