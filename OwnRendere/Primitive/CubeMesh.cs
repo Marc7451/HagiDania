@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OwnRendere
+namespace OwnRendere.Shapes
 {
     internal class CubeMesh : Mesh
     {

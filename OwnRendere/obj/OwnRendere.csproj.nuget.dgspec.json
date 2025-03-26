@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\OwnRendere.csproj": {}
   },
   "projects": {
@@ -12,6 +13,19 @@
         "projectPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\OwnRendere.csproj",
         "packagesPath": "C:\\Users\\Marc7\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\obj\\",
+=======
+    "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj": {}
+  },
+  "projects": {
+    "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+        "projectName": "OwnRendere",
+        "projectPath": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+        "packagesPath": "C:\\Users\\Anders\\.nuget\\packages\\",
+        "outputPath": "C:\\Undervisning\\HagiDania\\OwnRendere\\obj\\",
+>>>>>>> origin/Anders
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

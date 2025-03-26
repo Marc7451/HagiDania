@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ei0gBajlzEw=",
   "success": true,
   "projectFilePath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+=======
+  "dgSpecHash": "Ivkafrjnero=",
+  "success": true,
+  "projectFilePath": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+>>>>>>> origin/Anders
   "expectedPackageFiles": [
     "C:\\Users\\Marc7\\.nuget\\packages\\opentk\\4.9.3\\opentk.4.9.3.nupkg.sha512",
     "C:\\Users\\Marc7\\.nuget\\packages\\opentk.audio.openal\\4.9.3\\opentk.audio.openal.4.9.3.nupkg.sha512",

@@ -11,10 +11,14 @@ namespace OwnRendere
     {
         public Material material;
         Mesh mesh;
+        private Vector2 spriteSize;
+
         public Renderer(Material material, Mesh mesh)
         {
             this.material = material;
             this.mesh = mesh;
+            spriteSize = material.spriteSize;
+
         }
         public void Draw(Matrix4 mvp)
         {
@@ -22,5 +26,7 @@ namespace OwnRendere
             material.SetUniform("mvp", mvp);
             mesh.Draw();
         }
+
+        public Vector2 GetSpriteSize() => spriteSize;
     }
 }

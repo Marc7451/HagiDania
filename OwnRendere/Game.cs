@@ -3,7 +3,7 @@ using OpenTK.Mathematics;
 using OpenTK.Windowing.Common;
 using OpenTK.Windowing.Desktop;
 using OpenTK.Windowing.GraphicsLibraryFramework;
-using OwnRendere.Shaders;
+using OwnRendere.Shapes;
 using System.Diagnostics;
 
 namespace OwnRendere
@@ -16,8 +16,13 @@ namespace OwnRendere
         private Texture texture0;
         private Texture texture1;
 
+        private Texture texture2;
+        private Texture texture3;
 
         public List<GameObject> gameObjects = new List<GameObject>();
+        //UI
+        public List<GameObject> UI = new List<GameObject>();
+        private Matrix4 uiProjection;
 
         Camera camera;
 
@@ -29,12 +34,10 @@ namespace OwnRendere
 
         protected override void OnLoad()
         {            
-            base.OnLoad();
+            base.OnLoad();            
 
-            GL.Enable(EnableCap.DepthTest);
-
-            texture0 = new Texture("Textures/wall.jpg");
-            texture1 = new Texture("Textures/AragonTexUdenBaggrund.png");
+            texture0 = new Texture("Textures/wall.jpg", .2f);
+            texture1 = new Texture("Textures/AragonTexUdenBaggrund.png", .2f);
             Dictionary<string, object> uniforms = new Dictionary<string, object>();
             uniforms.Add("texture0", texture0);
             uniforms.Add("texture1", texture1);
@@ -45,6 +48,21 @@ namespace OwnRendere
             Renderer rend3 = new Renderer(mat, new CylinderMesh(36, 1.0f, 0.5f));
             Renderer rend4 = new Renderer(mat, new SphereMesh(36, 36, 0.5f));
             
+            Material mat_3D = new Material("Shaders/shader.vert", "Shaders/shader.frag", uniforms);
+            //UI
+            //Map
+            Dictionary<string, object> UI_Images = new Dictionary<string, object>();
+            texture2 = new Texture("Sprites/round_brown.png", 100);
+            UI_Images.Add("texture2", texture2);
+            Material uiMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", UI_Images, true);
+            Renderer ui = new Renderer(uiMaterial, new PlaneMesh());
+            Renderer bigUI = new Renderer(uiMaterial, new PlaneMesh());
+            //Dot
+            Dictionary<string, object> dotImages = new Dictionary<string, object>();
+            texture3 = new Texture("Sprites/progress_red_small_border.png", 100);
+            dotImages.Add("texture3", texture3);
+            Material dotMaterial = new Material("Shaders/ui_shader.vert", "Shaders/ui_shader.frag", dotImages, true);
+            Renderer dot = new Renderer(dotMaterial, new PlaneMesh());
 
             //Camera
             GameObject cam = new GameObject(null, this);
@@ -53,9 +71,11 @@ namespace OwnRendere
             camera = cam.GetComponent<Camera>();
             gameObjects.Add(cam);
 
+            //Triangle
             GameObject triangle = new GameObject(rend, this);
             gameObjects.Add(triangle);
 
+            //Cube
             GameObject cube = new GameObject(rend2, this);
             cube.AddComponent<MoveUpDownBehaviour>();
             cube.transform.Position = new Vector3(1, 0, 0);
@@ -69,17 +89,47 @@ namespace OwnRendere
             sphere.AddComponent<RotateBehaviour>();
             sphere.transform.Position = new Vector3(-1, 0, 0);
             gameObjects.Add(sphere);
+            //UI
+            //Plane
+            GameObject plane = new GameObject(ui, this);
+            plane.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, 0);
+            plane.transform.Scale = new Vector3(1.5f, 1.5f, 1);
+            UI.Add(plane);
+            //Dot
+            GameObject dotObj = new GameObject(dot, this);
+            dotObj.transform.Position = new Vector3(Size.X / 2 - 200, Size.Y / 2 + 200, -1);
+            dotObj.transform.Scale = new Vector3(1.2f, 1.2f, 1);
+            UI.Add(dotObj);
+            //Plane 2
+            GameObject bigPlane = new GameObject(bigUI, this);
+            bigPlane.transform.Position = new Vector3(Size.X / 2 - 100, Size.Y / 2 + 200, .5f);
+            bigPlane.transform.Scale = new Vector3(3.2f, 3.2f, 1);
+            UI.Add(bigPlane);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
             base.OnUpdateFrame(args);
+            
             gameObjects.ForEach(x => x.Update(args));
+            UI.ForEach(x => x.Update(args));
+
         }
         protected override void OnRenderFrame(FrameEventArgs args)
         {
             base.OnRenderFrame(args);
             GL.Clear(ClearBufferMask.ColorBufferBit | ClearBufferMask.DepthBufferBit);
+            GL.Enable(EnableCap.DepthTest);
             gameObjects.ForEach(x => x.Draw(camera.GetViewProjection()));
+
+            //UI
+            // Sort UI-listen, så elementer med den største Z-værdi tegnes først
+            UI.Sort((a, b) => b.transform.Position.Z.CompareTo(a.transform.Position.Z));
+
+            // UI rendering
+            GL.Disable(EnableCap.DepthTest);
+            uiProjection = Matrix4.CreateOrthographicOffCenter(0, Size.X, 0, Size.Y, -1, 1);
+            UI.ForEach(x => x.Draw(uiProjection));
+
             SwapBuffers();
 
             //Input

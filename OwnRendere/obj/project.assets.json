@@ -457,11 +457,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\OwnRendere.csproj",
       "projectName": "OwnRendere",
       "projectPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\OwnRendere.csproj",
       "packagesPath": "C:\\Users\\Marc7\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Marc7\\Desktop\\Visual\\ComputorGrafik\\Github\\HagiDania\\OwnRendere\\obj\\",
+=======
+      "projectUniqueName": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+      "projectName": "OwnRendere",
+      "projectPath": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+      "packagesPath": "C:\\Users\\Anders\\.nuget\\packages\\",
+      "outputPath": "C:\\Undervisning\\HagiDania\\OwnRendere\\obj\\",
+>>>>>>> origin/Anders
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
