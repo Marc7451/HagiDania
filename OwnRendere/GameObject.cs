@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OwnRendere.Shaders
+namespace OwnRendere
 {
     public class GameObject
     {
@@ -63,7 +63,7 @@ namespace OwnRendere.Shaders
         public void Draw(Matrix4 vp)
         {
             if(renderer != null)
-                renderer.Draw(transform.CalculateModel() * vp);
+                renderer.Draw(transform.CalculateModel(renderer.GetSpriteSize()) * vp);
         }
     }
 }

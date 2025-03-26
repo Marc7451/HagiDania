@@ -69,7 +69,6 @@ namespace OwnRendere
             GL.UseProgram(handle);
         }
 
-        
         protected virtual void Dispose(bool disposing)
         {
             if (!disposedValue)
@@ -78,13 +77,15 @@ namespace OwnRendere
                 disposedValue = true;
             }
         }
+
         ~Shader()
         {
-            if (disposedValue == false)
+            if (!disposedValue)
             {
-                Console.WriteLine("GPU Resource leak! call Dispose() ? ");
+                Console.WriteLine("GPU Resource leak! call Dispose() ?");
             }
         }
+
         public void Dispose()
         {
             Dispose(true);
@@ -96,22 +97,49 @@ namespace OwnRendere
             return GL.GetAttribLocation(handle, attribName);
         }
 
-        public void SetInt(string name, int value)
+        private int GetUniformLocation(string name)
         {
             int location = GL.GetUniformLocation(handle, name);
-            GL.Uniform1(location, value);
+            if (location == -1)
+            {
+                Console.WriteLine($"Warning: Uniform '{name}' not found in shader.");
+            }
+            return location;
+        }
+
+        public void SetInt(string name, int value)
+        {
+            int location = GetUniformLocation(name);
+            if (location != -1)
+                GL.Uniform1(location, value);
         }
 
         public void SetFloat(string name, float value)
         {
-            int location = GL.GetUniformLocation(handle, name);
-            GL.Uniform1(location, value);
+            int location = GetUniformLocation(name);
+            if (location != -1)
+                GL.Uniform1(location, value);
         }
 
         public void SetMatrix(string name, Matrix4 transform)
         {
-            int location = GL.GetUniformLocation(handle, name);
-            GL.UniformMatrix4(location, true, ref transform);
+            int location = GetUniformLocation(name);
+            if (location != -1)
+                GL.UniformMatrix4(location, true, ref transform);
+        }
+
+        public void SetVector3(string name, Vector3 vec)
+        {
+            int location = GetUniformLocation(name);
+            if (location != -1)
+                GL.Uniform3(location, vec);
+        }
+
+        public void SetVector4(string name, Vector4 vec)
+        {
+            int location = GetUniformLocation(name);
+            if (location != -1)
+                GL.Uniform4(location, vec);
         }
     }
 }

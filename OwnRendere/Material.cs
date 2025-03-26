@@ -5,22 +5,37 @@ namespace OwnRendere
 {
     public class Material
     {
-        Shader shader;
-        Dictionary<string, object> uniforms = new Dictionary<string, object>();
-        Dictionary<int, Texture> textures = new Dictionary<int, Texture>();
-        public Material(string vertPath, string fragPath, Dictionary<string, object> uniforms)
+        private Shader shader;
+        private Dictionary<string, object> uniforms = new Dictionary<string, object>();
+        private Dictionary<int, Texture> textures = new Dictionary<int, Texture>();
+
+        private bool isUI;
+        public Vector2 spriteSize { get; private set; }
+
+        public Material(string vertPath, string fragPath, Dictionary<string, object> uniforms, bool isUI = false)
         {
+            this.isUI = isUI;
             shader = new Shader(vertPath, fragPath);
+
             foreach (KeyValuePair<string, object> uniform in uniforms)
             {
                 SetUniform(uniform.Key, uniform.Value);
+            }
+
+            foreach (var uniform in uniforms.Values)
+            {
+                if (uniform is Texture tex)
+                {
+                    spriteSize = new Vector2(tex.Width, tex.Height) * tex.PixelScale;
+                    break;
+                }
             }
         }
 
         public void SetUniform(string name, object uniform)
         {
-            //Need to activate the shader before setting uniforms :)
             shader.Use();
+
             if (uniform is int uniformInt)
             {
                 shader.SetInt(name, uniformInt);
@@ -33,6 +48,10 @@ namespace OwnRendere
             {
                 shader.SetMatrix(name, uniformMatrix);
             }
+            else if (uniform is Vector4 uniformVector4)
+            {
+                shader.SetVector4(name, uniformVector4);
+            }
             else if (uniform is Texture tex)
             {
                 int addedTextures = textures.Count;
@@ -41,20 +60,34 @@ namespace OwnRendere
             }
             else
             {
-                Console.WriteLine($"Unsupported shader uniform type: ");
+                Console.WriteLine($"Unsupported shader uniform type: {uniform.GetType()}");
                 return;
             }
+
             uniforms[name] = uniform;
         }
 
         public void UseShader()
         {
-            foreach (KeyValuePair<int, Texture> TexWithIndex in textures)
+            if (isUI)
             {
-                TexWithIndex.Value.Use(TextureUnit.Texture0 + TexWithIndex.Key);
+                // UI kræver blending for gennemsigtighed
+                GL.Enable(EnableCap.Blend);
+                GL.BlendFunc(BlendingFactor.SrcAlpha, BlendingFactor.OneMinusSrcAlpha);
             }
-            shader.Use();
+            else
+            {
+                // Normal rendering slår blending fra
+                GL.Disable(EnableCap.Blend);
+            }
 
+            foreach (KeyValuePair<int, Texture> texWithIndex in textures)
+            {
+                texWithIndex.Value.Use(TextureUnit.Texture0 + texWithIndex.Key);
+            }
+
+            shader.Use();
         }
+
     }
 }
