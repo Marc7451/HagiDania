@@ -32,6 +32,15 @@ namespace OwnRendere
             }
         }
 
+        public Material(string vertPath, string fragPath, string name, Texture texture)
+        {
+            shader = new Shader(vertPath, fragPath);
+            foreach (KeyValuePair<string, object> uniform in uniforms)
+            {
+                SetUniform(uniform.Key, uniform.Value);
+            }
+        }
+
         public void SetUniform(string name, object uniform)
         {
             shader.Use();
