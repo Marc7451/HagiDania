@@ -3,8 +3,16 @@
   "WorkspaceRootPath": "C:\\Undervisning\\HagiDania\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\ownrendere.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\ownrendere.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\game.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|solutionrelative:ownrendere\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{891CCACD-28ED-4D91-8AAB-EB648414452F}|OwnRendere\\OwnRendere.csproj|c:\\undervisning\\hagidania\\ownrendere\\camera.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,20 +42,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Game.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Game.cs",
               "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Game.cs",
               "RelativeToolTip": "OwnRendere\\Game.cs",
-              "ViewState": "AgIAAEMAAAAAAAAAAAAowFsAAABcAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAYwF8AAABCAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-25T10:09:55.334Z",
               "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OwnRendere",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+              "RelativeDocumentMoniker": "OwnRendere\\OwnRendere.csproj",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\OwnRendere.csproj",
+              "RelativeToolTip": "OwnRendere\\OwnRendere.csproj",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-03-25T14:04:12.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Program.cs",
+              "RelativeDocumentMoniker": "OwnRendere\\Program.cs",
+              "ToolTip": "C:\\Undervisning\\HagiDania\\OwnRendere\\Program.cs*",
+              "RelativeToolTip": "OwnRendere\\Program.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAD4vwMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T14:01:40.463Z",
               "EditorCaption": ""
             },
             {
@@ -56,7 +89,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Camera.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Camera.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Camera.cs",
@@ -69,7 +102,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "Texture.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Texture.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Texture.cs",
@@ -82,7 +115,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "Material.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Material.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Material.cs",
@@ -95,7 +128,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 6,
               "Title": "Transform.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Transform.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Transform.cs",
@@ -108,7 +141,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "Renderer.cs",
               "DocumentMoniker": "C:\\Undervisning\\HagiDania\\OwnRendere\\Renderer.cs",
               "RelativeDocumentMoniker": "OwnRendere\\Renderer.cs",

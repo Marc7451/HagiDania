@@ -76,3 +76,4 @@ C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Sprites\round_brown.png
 C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.frag
 C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Shaders\ui_shader.vert
 C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\Sprites\progress_red_small_border.png
+C:\Undervisning\HagiDania\OwnRendere\bin\Debug\net8.0\SharpFont.dll.config

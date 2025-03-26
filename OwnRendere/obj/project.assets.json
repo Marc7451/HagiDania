@@ -193,6 +193,18 @@
           }
         }
       },
+      "SharpFont/4.0.1": {
+        "type": "package",
+        "dependencies": {
+          "SharpFont.Dependencies": "(, )"
+        },
+        "build": {
+          "build/SharpFont.props": {}
+        }
+      },
+      "SharpFont.Dependencies/2.5.5": {
+        "type": "package"
+      },
       "StbImageSharp/2.30.15": {
         "type": "package",
         "compile": {
@@ -405,6 +417,41 @@
         "opentk.windowing.graphicslibraryframework.nuspec"
       ]
     },
+    "SharpFont/4.0.1": {
+      "sha512": "yoFLcuWMYdBGB4YLq3bvzrctItJIb+EuK7C7PGgBzqsKxx5UXUwTce64kbvuDQWlMf6p4uQwDm5t2rQdZ9EkyA==",
+      "type": "package",
+      "path": "sharpfont/4.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/SharpFont.props",
+        "config/SharpFont.dll.config",
+        "lib/net45/SharpFont.dll",
+        "lib/net45/SharpFont.dll.config",
+        "lib/net45/SharpFont.xml",
+        "sharpfont.4.0.1.nupkg.sha512",
+        "sharpfont.nuspec"
+      ]
+    },
+    "SharpFont.Dependencies/2.5.5": {
+      "sha512": "QlGhaq7pL90m2PNkP+YRaFR+wQsDULxOo3kFUUm/jaf6Ym++jCR2R78oMtKqzVjjCjm1Skwy3k1jYC0mx7/lXw==",
+      "type": "package",
+      "path": "sharpfont.dependencies/2.5.5",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "bin/msvc10/x64/freetype6.dll",
+        "bin/msvc10/x86/freetype6.dll",
+        "bin/msvc11/x64/freetype6.dll",
+        "bin/msvc11/x86/freetype6.dll",
+        "bin/msvc12/x64/freetype6.dll",
+        "bin/msvc12/x86/freetype6.dll",
+        "bin/msvc9/x64/freetype6.dll",
+        "bin/msvc9/x86/freetype6.dll",
+        "sharpfont.dependencies.2.5.5.nupkg.sha512",
+        "sharpfont.dependencies.nuspec"
+      ]
+    },
     "StbImageSharp/2.30.15": {
       "sha512": "7QqbupVhz2kcFUPTgMw4iHR9rYDHGundzzee19Mwmd1typ2Lnv8EVJcLJxlkeBM2+4ex0NwsMtdbGSJctp1XCQ==",
       "type": "package",
@@ -447,6 +494,7 @@
   "projectFileDependencyGroups": {
     "net8.0": [
       "OpenTK >= 4.9.3",
+      "SharpFont >= 4.0.1",
       "StbImageSharp >= 2.30.15"
     ]
   },
@@ -505,6 +553,10 @@
             "target": "Package",
             "version": "[4.9.3, )"
           },
+          "SharpFont": {
+            "target": "Package",
+            "version": "[4.0.1, )"
+          },
           "StbImageSharp": {
             "target": "Package",
             "version": "[2.30.15, )"
@@ -529,5 +581,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1602",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "SharpFont 4.0.1 does not provide an inclusive lower bound for dependency SharpFont.Dependencies. SharpFont.Dependencies 2.5.5 was resolved instead.",
+      "libraryId": "SharpFont.Dependencies",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
 }
