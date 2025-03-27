@@ -8,7 +8,7 @@ namespace OwnRendere
 {
     public class TriangleMesh : Mesh
     {
-        protected override float[] vertices { get; set; } =
+        public override float[] vertices { get; set; } =
 {
             // Position         // Texture
             0.0f,  0.5f, 0.0f,  0.5f, 1.0f, // Top
@@ -16,7 +16,7 @@ namespace OwnRendere
             0.5f, -0.5f, 0.0f,  1.0f, 0.0f  // Bottom right
         };
 
-        protected override uint[] indices { get; set; } =
+        public override uint[] indices { get; set; } =
         {
             0, 1, 2 // Én trekant
         };

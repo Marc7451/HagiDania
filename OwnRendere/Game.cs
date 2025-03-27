@@ -62,6 +62,7 @@ namespace OwnRendere
             Renderer rend2 = new Renderer(mat, new CubeMesh());
             Renderer rend3 = new Renderer(mat, new CylinderMesh(36, 1.0f, 0.5f));
             Renderer rend4 = new Renderer(mat, new SphereMesh(36, 36, 0.5f));
+            Renderer rend5 = new Renderer(mat, new CapsuleMesh(36, 36, 36, 1.0f, 0.5f));
             
 
             //Camera
@@ -106,6 +107,10 @@ namespace OwnRendere
             dotObj.transform.Scale = new Vector3(1.2f, 1.2f, 1);
             dotObj.AddComponent<LoopMovementRightToLeft>(25, 50);
             UI.Add(dotObj);
+            GameObject capsule = new GameObject(rend5, this);
+            capsule.AddComponent<RotateBehaviour>();
+            capsule.transform.Position = new Vector3(-4, 0, 0);
+            gameObjects.Add(capsule);
         }
         protected override void OnUpdateFrame(FrameEventArgs args)
         {

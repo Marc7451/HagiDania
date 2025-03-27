@@ -8,7 +8,7 @@ namespace OwnRendere.Shapes
 {
     internal class CubeMesh : Mesh
     {
-        protected override float[] vertices { get; set; } =
+        public override float[] vertices { get; set; } =
         {
             // Positions         // Texture Coords
             // Front face
@@ -48,7 +48,7 @@ namespace OwnRendere.Shapes
             -0.5f, -0.5f,  0.5f,  0.0f, 1.0f,
         };
 
-        protected override uint[] indices { get; set; } =
+        public override uint[] indices { get; set; } =
         {
             // Front face
             0, 1, 2,  2, 3, 0,
