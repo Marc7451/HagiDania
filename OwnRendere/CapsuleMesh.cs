@@ -27,7 +27,7 @@ namespace OwnRendere
             ShiftVertices(topSphere.vertices, 0, height / 2, 0);
 
             //  Flyt den nedre halvkugle nedad, så dens top starter præcis ved cylinderens bund
-            ShiftVertices(bottomSphere.vertices, 0, -height / 2, 0, true);
+            ShiftVertices(bottomSphere.vertices, 0, -height / 2, 0);
 
             //  Kombiner alle vertices
             int cylinderOffset = verts.Count / 5;
